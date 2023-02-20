@@ -13,24 +13,12 @@ print_r( $sorted_words );
 
 //Write a PHP function to concatenate two strings, but with the second string starting from the end of the first string.
 echo "Code: 2\n";
-function concatReverse( $str1, $str2 ) {
-    $len1 = strlen( $str1 );
-    $len2 = strlen( $str2 );
-    $result = "";
-
-    for ( $i = 0; $i < $len1; $i++ ) {
-        $result .= $str1[$i];
-        if ( $i == $len1 - 1 ) {
-            for ( $j = $len2 - 1; $j >= 0; $j-- ) {
-                $result .= $str2[$j];
-            }
-        }
-    }
-
-    return $result;
+function concatReverse($str1, $str2) {
+    $c = $str1. strrev( $str2);
+    return $c;
 }
-$str1 = "Hello";
-$str2 = "World";
+$str1 = "Hello World!";
+$str2 = "php is awesome";
 $result = concatReverse($str1, $str2);
 echo "For $str1 and $str2 result = $result";
 
